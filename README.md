@@ -16,9 +16,9 @@ docker run -d --network locationtracker -p 8090:8090 --name positiontracker --en
 
 
 ## SETTING UP GIT REPO
-2.  git init
-3. Go to Github and create repository lt-position-tracker
-4. git remote add origin https://github.com/guptavinodkumar/lt-position-tracker.git
-5. git add .
-6. git commit -m""
-7. git push --set-upstream origin master
+1.  git init
+2. Go to Github and create repository lt-position-tracker
+3. git remote add origin https://github.com/guptavinod/lt-position-tracker.git
+4. git add .
+5. git commit -m""
+6. git push --set-upstream origin master
