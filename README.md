@@ -4,14 +4,16 @@
 
 ## TEST APPLICATION 
 
-1. Build Docker Image of position-tracker  
+1. Build Docker Image of lt-position-tracker  
+push image in docker hub: docker push guptavinodkumar/lt-position-tracker:0.0.1-RELEASE
+
 2. Create network (if not already created) --> docker network create locationtracker
 
 3. RUN mongo db container:   
 docker run -d --network locationtracker --name mongodb -p 27017:27017 mongo:3.6.5-jessie
    
 4. RUN position tracker application:   
-docker run -d --network locationtracker -p 8090:8090 --name positiontracker --env spring.activemq.broker-url=tcp://myqueue:61616 --env fleetman.position.queue=positionQueue --env spring.data.mongodb.host=mongodb guptavinodkumar/position-tracker:0.0.1-RELEASE
+docker run -d --network locationtracker -p 8090:8090 --name positiontracker --env spring.activemq.broker-url=tcp://myqueue:61616 --env fleetman.position.queue=positionQueue --env spring.data.mongodb.host=mongodb guptavinodkumar/lt-position-tracker:0.0.1-RELEASE
 
 
 
